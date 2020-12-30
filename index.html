@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Backdrop Filter Demo</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="background">
+  <div class="circle -red -small"></div>
+  <div class="circle -blue -large"></div>
+  <div class="circle -yellow -small"></div>
+</div>
+
+<div class="title">
+  <h1>CSS Backdrop Filters Demo</h1>
+
+</div>
+
+
+<div class="panel" id="app" v-bind:class="selectedFilter">
+  <h2>Pick a Filter</h2>
+
+  <label>Current Filter</label>
+  <select v-model="selectedFilter">
+    <option value="none" selected>None - Pick One!</option>
+    <option value="blur">blur - Blurs the image.</option>
+    <option value="brightness">brightness - Makes the image brighter or darker.</option>
+    <option value="contrast">contrast - Increases or decreases the image's contrast.</option>
+    <option value="drop-shadow">drop-shadow - Applies a drop shadow behind the image.</option>
+    <option value="grayscale">grayscale - Converts the image to grayscale.</option>
+    <option value="hue">hue-rotate - Changes the overall hue of the image.</option>
+    <option value="invert">invert - Inverts the colors of the image.</option>
+    <option value="opacity">opacity - Makes the image transparent.</option>
+    <option value="saturate">saturate - Super-saturates or desaturates the input image.</option>
+    <option value="sepia">sepia - Converts the image to sepia.</option>
+  </select>
+
+  <hr>
+
+  <p>
+    This panel applies filters to it's background, using <code>backdrop-filter</code>. Inspect the panel element to see the specific CSS!
+  </p>
+
+  <p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter"
+      target="_blank" rel="noopener">Learn more about backdrop-filter on MDN (opens in a new tab)</a>.
+  </p>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
